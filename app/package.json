@@ -1,0 +1,13 @@
+{
+  "name": "secure-ci-cd-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node ../tests/smoke.test.js"
+  },
+  "dependencies": {
+    "express": "4.16.0",
+    "jsonwebtoken": "8.5.1",
+    "sqlite3": "5.0.0"
+  }
+}
