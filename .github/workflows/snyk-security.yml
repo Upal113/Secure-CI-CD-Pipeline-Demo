@@ -87,10 +87,6 @@ jobs:
       - name: Build Docker Image
         run: docker build -t secure-api -f docker/Dockerfile .
 
-      - name: Setup Snyk CLI
-        uses: snyk/actions/setup@master
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
       - name: Run Container Scan
         run: snyk container test secure-api --file=docker/Dockerfile
